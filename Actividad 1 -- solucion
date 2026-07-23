@@ -30,15 +30,17 @@ Al finalizar la actividad, los estudiantes deberán ser capaces de:
 
 ## 1. Nombre del Space
 
-**Nombre:**
+**Nombre: GEMMA 4 - Vision token budget**
 
-**Enlace:**
+**Enlace:https://huggingface.co/spaces/google/gemma4_vision_token_budget**
 
 ------------------------------------------------------------------------
 
 ## 2. ¿Qué hace el agente?
 
-Describa en dos o tres líneas cuál es la función del sistema.
+Segun lo que pude explorar lo que hace es que uno le sube una imagen y
+va aumentado el tamaño de la misma y le va mejorando la resolucion de esta
+para que no se vea pixeleada por aumentar el tamañao.
 
 ------------------------------------------------------------------------
 
@@ -46,10 +48,19 @@ Describa en dos o tres líneas cuál es la función del sistema.
 
   Elemento          Respuesta
   ----------------- ----------------------------------------------------
-  **Performance**   ¿Qué significa que el agente haga bien su trabajo?
-  **Environment**   ¿Con qué interactúa el agente?
+  **Performance**   ¿Qué significa que el agente haga bien su trabajo? 
+                    Que la imagen no pierda calidad amedida que se va agranando la imagen porque 
+                    segun lo que probe y sin conocerla muy afondo esa es su promeza 
+                    ver la imagen bien y mas grande 
+
+  **Environment**   ¿Con qué interactúa el agente? 
+                    El agente directamente iteractua con la imagen que uno le sube para asi irla
+                    agrandando sin perder la calidad de esta 
   **Actuators**     ¿Qué acciones produce?
+                    Uno le sube la imagen y este empieza a agrandar la imagen y no pierde calidad
+                    ni resolucion de esta 
   **Sensors**       ¿Qué información recibe como entrada?
+                    la informacion que recibe es la foto que uno le sube y ya el hace su magia
 
 ------------------------------------------------------------------------
 
@@ -60,12 +71,11 @@ Complete la siguiente tabla y justifique brevemente cada respuesta.
   Propiedad      Clasificación     Justificación
   -------------- ----------------- ---------------
   Observable     Total / Parcial   
-  Determinista   Sí / No           
-  Episódico      Sí / No           
-  Estático       Sí / No           
-  Discreto       Sí / No           
-  Conocido       Sí / No           
-
+  Determinista   No                 Se puede ge    
+  Episódico      Sí                 Va agrandando poco a poco 
+  Estático       si                 Manda la imagen y la agranda si es la misma imagen funciona siempre igual
+  Discreto       No                 Recibe una imagen
+  Conocido       Sí                 Es una herramienta que ayuda a agrandar las imagenes 
 ------------------------------------------------------------------------
 
 ## 5. ¿Qué tipo de programa de agente creen que es?
@@ -78,8 +88,11 @@ Seleccione la opción que consideren más adecuada y explique por qué.
 -   Agente basado en utilidad
 -   Agente con aprendizaje
 
-> **Importante:** No existe una única respuesta correcta. Lo importante
-> es justificar la elección a partir del comportamiento observado.
+Segun lo que yo veo es Agente basado en modelo mantiene una representación interna de la imagen y del texto para razonar 
+sobre ellos antes de generar una respuesta.
+No responde únicamente con reglas del tipo "si pasa A, haz B", sino que utiliza un modelo entrenado que representa conocimiento sobre objetos, escenas,  imágenes.
+También podría argumentarse que tiene características de un agente con aprendizaje, ya que creo que fue entrenado con grandes cantidades de datos antes de su uso. 
+
 
 ------------------------------------------------------------------------
 
@@ -88,10 +101,23 @@ Seleccione la opción que consideren más adecuada y explique por qué.
 Después de las presentaciones, discutiremos preguntas como:
 
 -   ¿Dos Spaces diferentes pueden compartir el mismo tipo de entorno?
+    Si pueden tener el mismo entorno debido a que aunque realicen tareas distintas esta la posibilidad
+    de que pueden ser parcialmente observables, estocásticos y secuenciales, aunque uno describa imágenes
+
 -   ¿Es posible saber con certeza qué tipo de agente implementa un Space
     únicamente observándolo?
+    Observando su comportamiento se puede hacer una inferencia, pero no segun como lo veo no creo que con certeza se pueda saber el tipo
+      Un mismo comportamiento podría implementarse con distintos tipos de agentes
+
+3. ¿Qué diferencia existe entre el comportamiento observable de un agente y su implementación interna?
 -   ¿Qué diferencia existe entre el comportamiento observable de un
     agente y su implementación interna?
+    El comportamiento observable es lo que el usuario ve lo que yo mando y lo que me mueestra en este caso las  respuestas que genera.
+    La implementación interna es cómo está construido el agente piesno que son como algoritmos, modelo, reglas, memoria o técnicas de aprendizaje
+    para producir esas respuestas. 
+    Dos agentes pueden comportarse de forma muy similar aunque internamente funcionen de manera diferente.
+    
+
 
 ------------------------------------------------------------------------
 
@@ -106,15 +132,8 @@ Justifique su respuesta.
 
 ------------------------------------------------------------------------
 
-# Rúbrica (10 puntos)
 
-| Criterio | Puntos |
-|-----------|:------:|
-| Descripción correcta del Space | 2 |
-| Identificación de PEAS | 3 |
-| Clasificación del entorno | 3 |
-| Justificación del tipo de agente | 2 |
-| **Total** | **10** |
 
-------------------------------------------------------------------------
+
+
 
