@@ -71,7 +71,7 @@ Complete la siguiente tabla y justifique brevemente cada respuesta.
   Propiedad      Clasificación     Justificación
   -------------- ----------------- ---------------
   Observable     Total / Parcial   
-  Determinista   No                 Se puede ge    
+  Determinista   si                 Si la imagen es la misma el resueltado es el mismo   
   Episódico      Sí                 Va agrandando poco a poco 
   Estático       si                 Manda la imagen y la agranda si es la misma imagen funciona siempre igual
   Discreto       No                 Recibe una imagen
@@ -123,17 +123,17 @@ Después de las presentaciones, discutiremos preguntas como:
 
 # Reto adicional
 
-Encuentre un Space que pueda clasificarse como:
+Encuentre un Space que pueda clasificarse como: yo creo que Simple Calculator
+
 
 1.  **Totalmente observable, determinista y episódico.**
 2.  **Parcialmente observable, estocástico y secuencial.**
 
 Justifique su respuesta.
+Totalmente observable: Yo puedo ver  todos los datos de entrada (los números y la operación).
+Determinista: para la misma operación y los mismos números siempre obtiene el mismo resultado.
+Episódico: cada cálculo es independiente; una operación no afecta a la siguiente.
 
 ------------------------------------------------------------------------
-
-
-
-
 
 
